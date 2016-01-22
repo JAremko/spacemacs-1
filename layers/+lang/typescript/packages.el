@@ -16,14 +16,15 @@
   (use-package tide
     :defer t
     :mode ("\\.ts\\'" . typescript-mode)
-    :init (progn
-              (tide-setup)
-              (flycheck-mode +1)
-              (setq flycheck-check-syntax-automatically '(save mode-enabled))
-              (eldoc-mode +1)
-              (when (configuration-layer/package-usedp 'company)
-                 (company-mode-on))
-            )
+    :init (add-hook 'typescript-mode-hook
+              (lambda ()
+                (tide-setup)
+                (flycheck-mode +1)
+                (setq flycheck-check-syntax-automatically '(save mode-enabled))
+                (eldoc-mode +1)
+                (when (configuration-layer/package-usedp 'company)
+                   (company-mode-on))
+              ))
     :config (progn
               (spacemacs/set-leader-keys-for-major-mode 'typescript-mode
                 "gg" 'tide-jump-to-definition
@@ -35,4 +36,4 @@
               (spacemacs/set-leader-keys-for-major-mode 'tide-references-mode
                 "n" 'tide-find-next-reference
                 "N" 'tide-find-previous-reference
-                "g" 'tide-goto-reference))))
+                "g" 'tide-goto-reference)))))
