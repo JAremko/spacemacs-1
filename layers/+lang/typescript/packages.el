@@ -2,7 +2,7 @@
 ;;
 ;; Copyright (c) 2012-2016 Sylvain Benner & Contributors
 ;;
-;; "Spacemacized" by JAremko <w3techplaygound@gmail.com> 
+;; Author: JAremko <w3techplaygound@gmail.com> 
 ;; URL: https://github.com/JAremko/spacemacs-tide-pr
 ;;
 ;; This file is not part of GNU Emacs.
@@ -24,10 +24,15 @@
               (when (configuration-layer/package-usedp 'company)
                  (company-mode-on))
             )
-    :config (spacemacs/set-leader-keys-for-major-mode 'typescript-mode
-            "mgg" 'tide-jump-to-definition
-            "mgb" 'tide-jump-back
-            "mhh" 'tide-documentation-at-point
-            "msr" 'tide-restart-server
-            "mrr" 'tide-reference
-            "mrn" 'tide-rename-symbol)))
+    :config (progn
+              (spacemacs/set-leader-keys-for-major-mode 'typescript-mode
+                "gg" 'tide-jump-to-definition
+                "gb" 'tide-jump-back
+                "hh" 'tide-documentation-at-point
+                "sr" 'tide-restart-server
+                "rn" 'tide-rename-symbol
+                "fr" 'tide-reference
+              (spacemacs/set-leader-keys-for-major-mode 'tide-references-mode
+                "n" 'tide-find-next-reference
+                "N" 'tide-find-previous-reference
+                "g" 'tide-goto-reference))))
