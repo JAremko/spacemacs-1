@@ -16,16 +16,13 @@
   (use-package tide
     :defer t
     :mode ("\\.ts\\'" . typescript-mode)
-    :init (add-hook 'typescript-mode-hook
-              (lambda ()
-                (tide-setup)
-                (flycheck-mode +1)
-                (setq flycheck-check-syntax-automatically '(save mode-enabled))
-                (eldoc-mode +1)
-                (when (configuration-layer/package-usedp 'company)
-                   (company-mode-on))
-              ))
     :config (progn
+              (tide-setup)
+              (flycheck-mode +1)
+              (setq flycheck-check-syntax-automatically '(save mode-enabled))
+              (eldoc-mode +1)
+              (when (configuration-layer/package-usedp 'company)
+                (company-mode-on))
               (spacemacs/set-leader-keys-for-major-mode 'typescript-mode
                 "gg" 'tide-jump-to-definition
                 "gb" 'tide-jump-back
