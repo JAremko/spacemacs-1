@@ -16,7 +16,7 @@
   (use-package tide
     :defer t
     :mode ("\\.ts\\'" . typescript-mode)
-    :init (progn
+    :config (progn
               (tide-setup)
               (flycheck-mode +1)
               (setq flycheck-check-syntax-automatically '(save mode-enabled))
