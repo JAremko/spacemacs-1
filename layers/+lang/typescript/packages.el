@@ -29,8 +29,8 @@
                 "hh" 'tide-documentation-at-point
                 "sr" 'tide-restart-server
                 "rn" 'tide-rename-symbol
-                "fr" 'tide-reference
+                "fr" 'tide-reference)
               (spacemacs/set-leader-keys-for-major-mode 'tide-references-mode
                 "n" 'tide-find-next-reference
                 "N" 'tide-find-previous-reference
-                "g" 'tide-goto-reference)))))
+                "g" 'tide-goto-reference))))
