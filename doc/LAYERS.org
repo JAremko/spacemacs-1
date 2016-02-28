@@ -442,7 +442,9 @@ For layers that require another layers to be enabled, use the functions
 ensure that layers are enabled even if the user has not enabled them explicitly.
 Calls to these functions must go in the =config.el= file.
 
-** Use-package
+** Use--#4224--DDF*^&^===package==
+
+** Use--package
 In the vast majority of cases, a package =init= function should do nothing but
 call to =use-package=. Again, in the vast majority of cases, all the
 configuration you need to do should be doable within the =:init= or =:config=
