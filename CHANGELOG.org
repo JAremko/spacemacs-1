@@ -1,5 +1,5 @@
 * Release 0.105.x
-** 0.105.9 (2016/01/17)
+** 0.105.9 (2016/01/17) 
 *** Improvements
 - Fix error on Microsoft Windows 10 OS regarding missing =printf= command
   (don't call =exec-path-from-shell= function on Microsoft Windows)
