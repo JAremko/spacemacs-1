@@ -12,7 +12,7 @@
 * Description
 This layer adds support for editing Lua.
 
-** Features
+** Features:
 - Editing lua files using [[https://github.com/immerrr/lua-mode][lua-mode]]
 - Sending code to a lua REPL
 - Code linting using [[https://github.com/mpeterv/luacheck][Luacheck]]
