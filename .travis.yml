@@ -32,6 +32,7 @@ matrix:
  - env: TESTS=core EVM_EMACS=emacs-git-snapshot-travis
  - env: TESTS=doc EVM_EMACS=emacs-24.4-travis
  - env: TESTS=doc EVM_EMACS=emacs-24.5-travis
+ - env: TESTS=doc EVM_EMACS=emacs-25.2-travis
  - env: TESTS=doc EVM_EMACS=emacs-git-snapshot-travis
  - env: PUBLISH=spacemacs.org EVM_EMACS=emacs-25.2-travis
  - env: PUBLISH=develop.spacemacs.org EVM_EMACS=emacs-25.2-travis
