@@ -1,0 +1,15 @@
+version: 2
+
+general:
+  branches:
+    only:
+      - exp7
+
+version: 2.0
+jobs:
+  build:
+    docker:
+      - image: jare/spacemacs-circleci
+    steps:
+      - checkout
+      - run: bash ./.circleci/run
