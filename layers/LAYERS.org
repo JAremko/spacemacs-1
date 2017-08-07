@@ -22,6 +22,7 @@
 - [[#vim][Vim]]
 - [[#web-services][Web services]]
 
+
 * Chat
 - [[file:+chat/erc/README.org][erc]]
 - [[file:+chat/jabber/README.org][jabber]]
