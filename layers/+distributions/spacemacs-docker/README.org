@@ -153,7 +153,7 @@ Or allow local connection from the container's host-name
 
 *** Instruction
 It's a good idea to read [[https://github.com/JAremko/docker-x11-bridge][docker-x11-bridge]] and [[https://www.xpra.org/trac/][Xpra]] documentations, but
-here is a short instruction:
+here is a short instruction test:
 
 **** With Xpra desktop client
 Get [[https://xpra.org/][Xpra]] client for your OS. then
