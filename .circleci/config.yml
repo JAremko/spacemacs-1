@@ -50,7 +50,7 @@ references:
             ./.circleci/test layers/+distribution/spacemacs func_tests
 
 jobs:
-  "Validate PR":
+  "Validate_PR":
     docker:
       - image: jare/spacemacs-circleci:latest
     working_directory: ~/.emacs.d
@@ -153,34 +153,34 @@ workflows:
   version: 2
   build:
     jobs:
-      - "Validate PR"
+      - "Validate_PR"
       - "core Emacs25 (required)":
           requires:
-            - "Validate PR"
+            - "Validate_PR"
       - "spacemacs-base dist. Emacs25 (required)":
           requires:
-            - "Validate PR"
+            - "Validate_PR"
       - "core Emacs26 (required)":
           requires:
-            - "Validate PR"
+            - "Validate_PR"
       - "spacemacs-base dist. Emacs26 (required)":
           requires:
-            - "Validate PR"
+            - "Validate_PR"
       - "spacemacs dist. Emacs25 (required)":
           requires:
-            - "Validate PR"
+            - "Validate_PR"
       - "core Emacs snapshot (optional)":
           requires:
-            - "Validate PR"
+            - "Validate_PR"
       - "spacemacs-base dist. Emacs snapshot (optional)":
           requires:
-            - "Validate PR"
+            - "Validate_PR"
       - "spacemacs dist. Emacs snapshot (optional)":
           requires:
-            - "Validate PR"
+            - "Validate_PR"
       - "Validate Documentation (required)":
           requires:
-            - "Validate PR"
+            - "Validate_PR"
       - "CHANGELOG.develop updated (optional)":
           requires:
-            - "Validate PR"
+            - "Validate_PR"
